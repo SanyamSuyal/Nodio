@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { MascotSitting } from "./MascotSitting";
 
 export function Hero() {
   const [email, setEmail] = useState("");
@@ -43,21 +44,27 @@ export function Hero() {
   };
 
   return (
-    <section id="top" className="pt-8 pb-12 text-center md:pt-12 md:pb-16">
-      <p className="eyebrow inline-flex items-center gap-3 border border-[#1f1f1f] px-4 py-2">
-        <span>Early access - nodes opening soon</span>
-        <span className="pulse-dot inline-flex h-2 w-2 rounded-full bg-[#4ade80]" aria-hidden="true" />
-      </p>
+    <section id="top" className="pt-8 pb-12 md:pt-12 md:pb-16">
+      <div className="mx-auto max-w-5xl">
+        <div className="relative text-center md:text-left">
+          <p className="eyebrow inline-flex items-center gap-3 border border-[#1f1f1f] px-4 py-2">
+            <span>Early access - nodes opening soon</span>
+            <span className="pulse-dot inline-flex h-2 w-2 rounded-full bg-[#4ade80]" aria-hidden="true" />
+          </p>
 
-      <h1 className="mx-auto mt-10 max-w-5xl text-4xl font-medium leading-[1.08] tracking-[-0.035em] text-white sm:text-5xl md:text-7xl lg:text-[4.75rem]">
-        Affordable cloud storage,
-        <span className="block">powered by people.</span>
-      </h1>
+          <h1 className="mt-10 text-4xl font-medium leading-[1.08] tracking-[-0.035em] text-white sm:text-5xl md:pr-28 md:text-6xl lg:pr-36 lg:text-[4.2rem]">
+            Affordable cloud storage,
+            <span className="block">powered by people.</span>
+          </h1>
 
-      <p className="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-[#b5b5b5] md:text-xl">
-        People share spare space from their laptop or phone and earn. Teams get storage at a lower cost. Nodio
-        handles encryption and file splitting, so it feels simple and stays safe.
-      </p>
+          <MascotSitting className="pointer-events-none absolute right-24 top-5 hidden h-auto w-[128px] md:block lg:right-28 lg:w-[156px]" />
+
+          <p className="mt-8 text-base leading-relaxed text-[#b5b5b5] md:text-lg">
+            People share spare space from their laptop or phone and earn. Teams get storage at a lower cost. Nodio
+            handles encryption and file splitting, so it feels simple and stays safe.
+          </p>
+        </div>
+      </div>
 
       <form
         id="waitlist"
@@ -94,9 +101,7 @@ export function Hero() {
 
       {errorMessage ? <p className="mt-4 text-xs text-[#b5b5b5]">{errorMessage}</p> : null}
 
-      {submitted ? (
-        <p className="mt-4 text-xs text-[#7d7d7d]">You are in. We will email you as spots open.</p>
-      ) : null}
+      {submitted ? <p className="mt-4 text-xs text-[#7d7d7d]">You are in. We will email you as spots open.</p> : null}
     </section>
   );
 }
