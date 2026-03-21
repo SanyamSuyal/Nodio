@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { MascotBuilder } from "./MascotBuilder";
 
 export function Contribute() {
   const [email, setEmail] = useState("");
@@ -44,9 +45,12 @@ export function Contribute() {
 
   return (
     <section id="contribute" className="reveal-on-scroll scroll-mt-28 pt-12 pb-24 md:pt-14 md:pb-28">
-      <h2 className="text-center text-3xl font-medium leading-tight tracking-[-0.025em] text-white md:text-5xl">
-        Become a storage donor.
-      </h2>
+      <div className="relative mx-auto max-w-5xl">
+        <h2 className="text-center text-3xl font-medium leading-tight tracking-[-0.025em] text-white md:pr-24 md:text-5xl lg:pr-32">
+          Become a storage donor.
+        </h2>
+        <MascotBuilder className="pointer-events-none absolute right-36 top-[-70px] hidden h-auto w-[108px] md:block lg:right-44 lg:top-[-76px] lg:w-[124px]" />
+      </div>
 
       <div className="mt-10 border border-[#2b2b2b] p-7 md:p-10">
         <h2 className="text-3xl font-medium tracking-[-0.025em] text-white md:text-5xl">Share space. Earn monthly.</h2>
