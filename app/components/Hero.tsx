@@ -43,53 +43,59 @@ export function Hero() {
   };
 
   return (
-    <section id="top" className="fade-in pt-12 md:pt-20">
-      <p className="font-mono-geist inline-flex items-center gap-3 rounded-full border border-[#222] px-4 py-2 text-xs tracking-wide text-[#555]">
+    <section id="top" className="pt-8 pb-12 text-center md:pt-12 md:pb-16">
+      <p className="eyebrow inline-flex items-center gap-3 border border-[#1f1f1f] px-4 py-2">
         <span>Early access - nodes opening soon</span>
         <span className="pulse-dot inline-flex h-2 w-2 rounded-full bg-[#4ade80]" aria-hidden="true" />
       </p>
 
-      <h1 className="mt-8 max-w-4xl text-4xl font-medium leading-tight tracking-[-0.03em] text-white md:text-6xl">
-        Storage that lives across
-        <span className="block">every node.</span>
+      <h1 className="mx-auto mt-10 max-w-5xl text-4xl font-medium leading-[1.08] tracking-[-0.035em] text-white sm:text-5xl md:text-7xl lg:text-[4.75rem]">
+        Affordable cloud storage,
+        <span className="block">powered by people.</span>
       </h1>
 
-      <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#888] md:text-lg">
-        Nodio encrypts and shards every file across a distributed edge network, so your data remains private,
-        resilient, and available even when individual nodes go offline.
+      <p className="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-[#b5b5b5] md:text-xl">
+        People share spare space from their laptop or phone and earn. Teams get storage at a lower cost. Nodio
+        handles encryption and file splitting, so it feels simple and stays safe.
       </p>
 
       <form
         id="waitlist"
         onSubmit={handleSubmit}
-        className="fade-in fade-delay-1 mt-10 flex w-full max-w-xl flex-col gap-3 sm:flex-row"
+        className="mx-auto mt-12 flex w-full max-w-2xl flex-col gap-4"
       >
-        <label htmlFor="email" className="sr-only">
-          Email address
-        </label>
-        <input
-          id="email"
-          type="email"
-          required
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-          disabled={submitted || isSubmitting}
-          placeholder="you@company.com"
-          className="h-11 w-full rounded-md border border-[#2a2a2a] bg-[#0f0f0f] px-4 text-sm text-white outline-none transition-colors placeholder:text-[#555] focus:border-[#444] disabled:cursor-not-allowed disabled:text-[#555]"
-        />
-        <button
-          type="submit"
-          disabled={submitted || isSubmitting}
-          className="h-11 rounded-md border border-[#2a2a2a] bg-[#151515] px-5 text-sm text-white transition-colors hover:bg-[#1a1a1a] disabled:cursor-not-allowed disabled:bg-[#101010] disabled:text-[#555]"
-        >
-          {submitted ? "You are on the list" : isSubmitting ? "Saving..." : "Join waitlist"}
-        </button>
+        <p className="text-sm font-medium text-[#63a7ff] md:text-base">
+          First 100 contributors get priority node access.
+        </p>
+
+        <div className="flex w-full flex-col gap-3 sm:flex-row">
+          <label htmlFor="email" className="sr-only">
+            Email address
+          </label>
+          <input
+            id="email"
+            type="email"
+            required
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            disabled={submitted || isSubmitting}
+            placeholder="you@company.com"
+            className="h-11 w-full rounded-[4px] border border-[#2b2b2b] bg-transparent px-4 text-sm text-white outline-none transition-colors placeholder:text-[#7d7d7d] focus:border-[#63a7ff] disabled:cursor-not-allowed disabled:text-[#7d7d7d]"
+          />
+          <button
+            type="submit"
+            disabled={submitted || isSubmitting}
+            className="outlined-button h-11 rounded-[4px] px-5 text-sm disabled:cursor-not-allowed disabled:border-[#2b2b2b] disabled:text-[#7d7d7d]"
+          >
+            {submitted ? "You are on the list" : isSubmitting ? "Saving..." : "Get early access"}
+          </button>
+        </div>
       </form>
 
-      {errorMessage ? <p className="font-mono-geist mt-3 text-xs text-[#888]">{errorMessage}</p> : null}
+      {errorMessage ? <p className="mt-4 text-xs text-[#b5b5b5]">{errorMessage}</p> : null}
 
       {submitted ? (
-        <p className="font-mono-geist mt-3 text-xs text-[#555]">Request received. We will invite you as nodes open.</p>
+        <p className="mt-4 text-xs text-[#7d7d7d]">You are in. We will email you as spots open.</p>
       ) : null}
     </section>
   );

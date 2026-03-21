@@ -5,10 +5,11 @@
 :root {
   --bg: #0a0a0a;
   --text-heading: #ffffff;
-  --text-body: #888888;
-  --text-label: #555555;
-  --border-1: #222222;
-  --border-2: #2a2a2a;
+  --text-body: #b5b5b5;
+  --text-label: #7d7d7d;
+  --border-1: #1f1f1f;
+  --border-2: #2b2b2b;
+  --accent: #63a7ff;
 }
 
 body {
@@ -16,6 +17,7 @@ body {
   color: var(--text-body);
   font-family: var(--font-geist-sans), sans-serif;
   text-rendering: geometricPrecision;
+  line-height: 1.6;
 }
 
 @layer utilities {
@@ -24,36 +26,46 @@ body {
   }
 }
 
-.fade-in {
-  animation: fade-in 420ms ease-out forwards;
-  opacity: 0;
-}
-
-.fade-delay-1 {
-  animation-delay: 80ms;
-}
-
-.fade-delay-2 {
-  animation-delay: 150ms;
-}
-
-.fade-delay-3 {
-  animation-delay: 220ms;
-}
-
 .pulse-dot {
   animation: pulse-dot 2.4s ease-in-out infinite;
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-label);
+}
+
+.outlined-button {
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background: transparent;
+  color: #ffffff;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.outlined-button:hover {
+  background: #ffffff;
+  color: #0a0a0a;
+}
+
+.reveal-on-scroll {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 480ms ease, transform 480ms ease;
+}
+
+.reveal-delay-1 {
+  transition-delay: 80ms;
+}
+
+.reveal-delay-2 {
+  transition-delay: 150ms;
+}
+
+.reveal-delay-3 {
+  transition-delay: 220ms;
 }
 
 @keyframes pulse-dot {

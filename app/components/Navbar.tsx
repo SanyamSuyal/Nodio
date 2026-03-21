@@ -2,24 +2,24 @@ import Image from "next/image";
 
 export function Navbar() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-[#222] bg-[#0a0a0a]/80 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-[#1f1f1f] bg-[#0a0a0a]/92 backdrop-blur-md">
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6 md:px-8 lg:px-12">
-        <a href="#top" className="fade-in" aria-label="Nodio home">
+        <a href="#top" className="reveal-on-scroll is-visible" aria-label="Nodio home">
           <Image src="/logo.svg" alt="Nodio" width={150} height={42} priority />
         </a>
 
-        <nav className="fade-in fade-delay-1 hidden items-center gap-8 text-sm md:flex">
-          <a href="#how-it-works" className="text-[#888] transition-colors hover:text-white">
+        <nav className="reveal-on-scroll reveal-delay-1 is-visible hidden items-center gap-8 text-sm md:flex">
+          <a href="#how-it-works" className="text-[#b5b5b5] transition-colors hover:text-white">
             How it works
           </a>
-          <a href="#contribute" className="text-[#888] transition-colors hover:text-white">
+          <a href="#contribute" className="text-[#b5b5b5] transition-colors hover:text-white">
             Contribute
           </a>
         </nav>
 
         <a
           href="#waitlist"
-          className="fade-in fade-delay-2 rounded-md border border-[#2a2a2a] px-4 py-2 text-sm text-white transition-colors hover:bg-[#141414]"
+          className="outlined-button reveal-on-scroll reveal-delay-2 is-visible px-4 py-2 text-sm"
         >
           Join waitlist
         </a>

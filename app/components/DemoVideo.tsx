@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 function PlayOutlineIcon() {
@@ -15,9 +16,11 @@ export function DemoVideo() {
   const [hasVideo, setHasVideo] = useState(false);
 
   return (
-    <section className="fade-in fade-delay-2 mt-20 md:mt-28">
-      <p className="font-mono-geist mb-4 text-xs tracking-wide text-[#555]">See it in action</p>
-      <div className="relative overflow-hidden rounded-xl border border-[#222] bg-[#0d0d0d]">
+    <section className="reveal-on-scroll pt-10 pb-24 md:pt-16 md:pb-28">
+      <div className="mb-8 flex justify-center md:mb-10">
+        <Image src="/logo.svg" alt="Nodio" width={228} height={64} />
+      </div>
+      <div className="relative overflow-hidden border border-[#2b2b2b]">
         <video
           className={`w-full ${hasVideo ? "block" : "hidden"}`}
           controls
@@ -30,10 +33,10 @@ export function DemoVideo() {
         </video>
 
         {!hasVideo ? (
-          <div className="flex h-[260px] w-full items-center justify-center sm:h-[340px]">
+          <div className="flex h-[260px] w-full items-center justify-center sm:h-[360px]">
             <div className="flex flex-col items-center gap-3">
               <PlayOutlineIcon />
-              <p className="font-mono-geist text-xs text-[#555]">Demo video will appear here once uploaded.</p>
+              <p className="text-xs text-[#7d7d7d]">Demo video will appear here once uploaded.</p>
             </div>
           </div>
         ) : null}
