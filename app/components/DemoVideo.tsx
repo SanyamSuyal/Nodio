@@ -4,7 +4,7 @@ function EnvironmentLogo() {
   return (
     <svg
       className="h-auto w-full max-w-[520px]"
-      viewBox="0 0 520 160"
+      viewBox="0 0 450 160"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
@@ -53,8 +53,8 @@ function EnvironmentLogo() {
 function NodioCloudLogo() {
   return (
     <svg
-      className="h-auto w-full max-w-[460px]"
-      viewBox="0 0 460 140"
+      className="mx-auto h-auto w-full max-w-[320px] sm:max-w-[360px] md:max-w-[460px]"
+      viewBox="0 0 390 140"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
@@ -92,8 +92,8 @@ function NodioCloudLogo() {
 function NodioE2ELogo() {
   return (
     <svg
-      className="h-auto w-full max-w-[460px]"
-      viewBox="0 0 460 140"
+      className="mx-auto h-auto w-full max-w-[320px] sm:max-w-[360px] md:max-w-[460px]"
+      viewBox="0 0 335 140"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
@@ -130,8 +130,8 @@ function NodioE2ELogo() {
 function NodioCliLogo() {
   return (
     <svg
-      className="h-auto w-full max-w-[420px]"
-      viewBox="0 0 420 120"
+      className="mx-auto h-auto w-full max-w-[320px] sm:max-w-[360px] md:max-w-[420px]"
+      viewBox="0 0 275 120"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
@@ -161,13 +161,13 @@ export function DemoVideo() {
         <EnvironmentLogo />
       </div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5">
-        <div className="flex min-h-[160px] items-center justify-center border border-[#2b2b2b] bg-[#0f0f0f] px-3 py-5 sm:px-5">
+        <div className="flex min-h-[170px] items-center justify-center overflow-hidden border border-[#2b2b2b] bg-[#0f0f0f] px-3 py-5 sm:min-h-[180px] sm:px-5">
           <NodioCloudLogo />
         </div>
-        <div className="flex min-h-[160px] items-center justify-center border border-[#2b2b2b] bg-[#0f0f0f] px-3 py-5 sm:px-5">
+        <div className="flex min-h-[170px] items-center justify-center overflow-hidden border border-[#2b2b2b] bg-[#0f0f0f] px-3 py-5 sm:min-h-[180px] sm:px-5">
           <NodioE2ELogo />
         </div>
-        <div className="flex min-h-[160px] items-center justify-center border border-[#2b2b2b] bg-[#0f0f0f] px-3 py-5 sm:px-5">
+        <div className="flex min-h-[170px] items-center justify-center overflow-hidden border border-[#2b2b2b] bg-[#0f0f0f] px-3 py-5 sm:min-h-[180px] sm:px-5">
           <NodioCliLogo />
         </div>
       </div>
