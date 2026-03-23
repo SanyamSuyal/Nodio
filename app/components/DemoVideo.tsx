@@ -54,11 +54,12 @@ function NodioCloudLogo() {
   return (
     <svg
       className="mx-auto h-auto w-full max-w-[320px] sm:max-w-[360px] md:max-w-[460px]"
-      viewBox="0 0 390 140"
+      viewBox="60 0 307 140"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Nodio Cloud"
+      preserveAspectRatio="xMidYMid meet"
     >
       <path
         d="M120 95 C85 95 70 75 70 60 C70 45 85 30 105 30 C112 18 125 10 140 10 C165 10 185 28 185 50 C200 50 215 62 215 80 C215 95 200 105 180 105 H120Z"
@@ -93,11 +94,12 @@ function NodioE2ELogo() {
   return (
     <svg
       className="mx-auto h-auto w-full max-w-[320px] sm:max-w-[360px] md:max-w-[460px]"
-      viewBox="0 0 335 140"
+      viewBox="45 0 270 140"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Nodio E2E"
+      preserveAspectRatio="xMidYMid meet"
     >
       <path
         d="M95 20 L140 40 V75 C140 95 120 110 95 120 C70 110 50 95 50 75 V40 Z"
@@ -131,11 +133,12 @@ function NodioCliLogo() {
   return (
     <svg
       className="mx-auto h-auto w-full max-w-[320px] sm:max-w-[360px] md:max-w-[420px]"
-      viewBox="0 0 275 120"
+      viewBox="15 0 250 120"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Nodio CLI"
+      preserveAspectRatio="xMidYMid meet"
     >
       <rect x="20" y="20" width="90" height="80" rx="14" stroke="white" strokeWidth="6" />
 
