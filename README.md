@@ -15,48 +15,7 @@
 
 </div>
 
----
 
-Nodio distributes your files across a network of contributor nodes. Files are split into encrypted chunks, replicated across multiple nodes, and served from wherever is closest. If a node goes offline, chunks rebalance automatically.
-
-## Architecture
-
-```
-┌─────────────────────────────────────────────────┐
-│                     Client                       │
-└───────────────────────┬─────────────────────────┘
-                        │
-┌───────────────────────▼─────────────────────────┐
-│                   Coordinator                     │
-│   ┌─────────────────┐   ┌─────────────────────┐  │
-│   │  Chunk Router   │   │   Health Monitor    │  │
-│   └────────┬────────┘   └──────────┬──────────┘  │
-└────────────┼───────────────────────┼──────────────┘
-             │                       │
-    ┌────────▼───────────────────────▼────────┐
-    │   [Node A]   [Node B]   [Node C]  ...   │
-    └──────────────────┬───────────────────────┘
-                       │ fallback
-              ┌────────▼────────┐
-              │  Cloudflare R2   │
-              └─────────────────┘
-```
-
-## Stack
-
-| Layer | Technology |
-|---|---|
-| Frontend | Next.js 14, Tailwind CSS, TypeScript |
-| Backend | Node.js, Express |
-| Database | MongoDB |
-| Fallback storage | Cloudflare R2 |
-
-## Running locally
-
-```bash
-git clone https://github.com/SanyamSuyal/Nodio
-cd Nodio
-npm install
 npm run dev
 ```
 
