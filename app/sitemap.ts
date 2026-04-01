@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { seoPages } from "@/lib/seo-pages";
 
 const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL ??
@@ -14,5 +15,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
+    {
+      url: `${siteUrl}/blogs`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    ...seoPages.map((page) => ({
+      url: `${siteUrl}/${page.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
   ];
 }
