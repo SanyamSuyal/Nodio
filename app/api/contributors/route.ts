@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import clientPromise from "@/lib/mongodb";
+import getMongoClient from "@/lib/mongodb";
 
 type ContributorEntry = {
   email: string;
@@ -22,7 +22,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: "Please enter a valid email." }, { status: 400 });
     }
 
-    const client = await clientPromise;
+    const client = await getMongoClient();
     const db = client.db(DATABASE_NAME);
     const collection = db.collection<ContributorEntry>(COLLECTION_NAME);
 
